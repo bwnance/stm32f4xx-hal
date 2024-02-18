@@ -291,7 +291,7 @@ pub enum Ocm {
 }
 
 /// Wrapper type that indicates which register of the contained timer to use for DMA.
-pub struct CCR<T, const C: u8>(T);
+pub struct CCR<T, const C: u8>(pub T);
 pub type CCR1<T> = CCR<T, 0>;
 pub type CCR2<T> = CCR<T, 1>;
 pub type CCR3<T> = CCR<T, 2>;
